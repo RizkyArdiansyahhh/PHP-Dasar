@@ -41,7 +41,7 @@
 // Concat
 $namaDepan = "Rizky";
 $namaBelakang = "Ardiansyah";
-// echo $namaDepan . " " . $namaBelakang
+echo $namaDepan . " " . $namaBelakang
 echo "$namaDepan $namaBelakang";
 // 
 ?>
