@@ -31,7 +31,9 @@ $mahasiswa = (query("SELECT * FROM mahasiswa"));
         <tr>
             <td>1</td>
             <td>
-                <a href="">Ubah</a> | <a href="">Hapus</a>
+                <a href="">Ubah</a> |
+                <a href="hapus.php?id=<?= $mhs["id"] ?>"
+                    onClick="return confirm('apakah anda yakin untuk menghapus?') ">Hapus</a>
             </td>
             <td>
                 <img src="img/<?= $mhs["gambar"] ?>" alt="" width="100">
