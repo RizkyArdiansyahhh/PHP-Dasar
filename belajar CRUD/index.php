@@ -2,6 +2,8 @@
 require 'functions.php';
 
 $mahasiswa = query("SELECT * FROM mahasiswa");
+
+
 ?>
 <!doctype html>
 <html>
@@ -59,8 +61,40 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
                     </div>
                     <?php endforeach ?>
                 </div>
-                <div class="w-1/2">
-                    <h1>Tambah Data Mahasiswa</h1>
+                <div class="w-1/2 p-2">
+                    <div class="bg-primary py-5 px-7">
+                        <h1 class="text-white font-semibold text-2xl text-center mb-7">Tambah Data Mahasiswa</h1>
+                        <form action="tambah.php" method="post" class="flex flex-col gap-y-2">
+                            <div class="flex flex-col">
+                                <label class="text-white " for="nim">NIM</label>
+                                <input class="border rounded-lg py-2 px-2  border-slate-800" type="text" id="nim"
+                                    name="nim" placeholder="nim">
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="text-white " for="nama">Nama</label>
+                                <input class="border rounded-lg py-2 px-2  border-slate-800" type="text" id="nama"
+                                    name="nama" placeholder="nama">
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="text-white " for="email">Email</label>
+                                <input class="border rounded-lg py-2 px-2  border-slate-800" type="text" id="email"
+                                    name="email" placeholder="email">
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="text-white " for="jurusan">Jurusan</label>
+                                <input class="border rounded-lg py-2 px-2  border-slate-800" type="text" id="jurusan"
+                                    name="jurusan" placeholder="jurusan">
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="text-white " for="gambar">Gambar</label>
+                                <input class="border rounded-lg py-2 px-2  border-slate-800" type="text" id="gambar"
+                                    name="gambar" placeholder="gambar">
+                            </div>
+                            <button
+                                class="bg-yellow-400 px-5 py-2 border border-transparent hover:text-primary hover:border-yellow-400 hover:bg-white transition duration-200 font-bold text-white rounded-lg mt-7"
+                                type="submit" name="submit">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
