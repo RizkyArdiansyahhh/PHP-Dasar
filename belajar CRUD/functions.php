@@ -53,4 +53,12 @@ function update($data, $id){
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
+
+function delete($id){
+    global $conn;
+
+    $query = "DELETE FROM mahasiswa WHERE id = $id";
+    mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
+}
  ?>
