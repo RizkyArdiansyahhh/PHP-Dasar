@@ -31,4 +31,26 @@ function tambah($data){
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
+
+function update($data, $id){
+    global $conn;
+    $nim = $data["nim"];
+    $nama = $data["nama"];
+    $email = $data["email"];
+    $jurusan = $data["jurusan"];
+    $gambar = $data["gambar"];
+
+    $query = "UPDATE mahasiswa SET
+                nim = '$nim',
+                nama = '$nama',
+                email = '$email',
+                jurusan = '$jurusan',
+                gambar = '$gambar'
+
+                WHERE id = $id
+                ";
+
+    mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
+}
  ?>

@@ -51,7 +51,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
                             <div class="pt-4">
                                 <a href=""
                                     class="bg-green-500 px-4 py-2 rounded-md text-white font-bold border border-transparent hover:text-primary hover:border-green-500 hover:bg-white transition duration-200">More</a>
-                                <a href=""
+                                <a href="edit.php?id=<?= $mhs["id"] ?>"
                                     class="bg-yellow-400 px-4 py-2 rounded-md text-white font-bold border border-transparent hover:text-primary hover:border-yellow-400 hover:bg-white transition duration-200">Edit</a>
                                 <a href=""
                                     class="bg-red-500 px-4 py-2 rounded-md text-white font-bold border border-transparent hover:text-primary hover:border-red-500 hover:bg-white transition duration-200">Edit</a>
